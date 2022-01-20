@@ -26,6 +26,7 @@ import static com.android.internal.widget.LockPatternUtils.StrongAuthTracker.STR
 
 import android.annotation.NonNull;
 import android.app.ActivityManager;
+
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -301,7 +302,7 @@ public class Utils {
         return false;
     }
 
-    public static boolean isKeyguard(Context context, String clientPackage) {
+    static boolean isKeyguard(Context context, String clientPackage) {
         final boolean hasPermission = context.checkCallingOrSelfPermission(USE_BIOMETRIC_INTERNAL)
                 == PackageManager.PERMISSION_GRANTED;
 

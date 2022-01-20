@@ -484,7 +484,6 @@ public class NotificationManagerService extends SystemService {
     @GuardedBy("mNotificationLock")
     final ArrayMap<NotificationRecord, ArrayList<CancelNotificationRunnable>> mDelayedCancelations =
             new ArrayMap<>();
-    final ArrayMap<String, Long> mLastSoundTimestamps = new ArrayMap<>();
 
     private KeyguardManager mKeyguardManager;
 
