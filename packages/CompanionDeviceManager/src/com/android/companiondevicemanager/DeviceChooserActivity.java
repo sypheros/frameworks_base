@@ -121,11 +121,6 @@ public class DeviceChooserActivity extends Activity {
     }
 
     @Override
-    public String getCallingPackage() {
-        return requireNonNull(getService().mRequest.getCallingPackage());
-    }
-
-    @Override
     public void setTitle(CharSequence title) {
         final TextView titleView = findViewById(R.id.title);
         final int padding = getPadding(getResources());

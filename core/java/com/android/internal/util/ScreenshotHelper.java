@@ -307,7 +307,7 @@ public class ScreenshotHelper {
             };
 
             Message msg = Message.obtain(null, screenshotType, screenshotRequest);
-
+            final ServiceConnection myConn = mScreenshotConnection;
             Handler h = new Handler(handler.getLooper()) {
                 @Override
                 public void handleMessage(Message msg) {
