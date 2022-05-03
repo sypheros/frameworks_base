@@ -301,7 +301,7 @@ public class Utils {
         return false;
     }
 
-    static boolean isKeyguard(Context context, String clientPackage) {
+    public static boolean isKeyguard(Context context, String clientPackage) {
         final boolean hasPermission = context.checkCallingOrSelfPermission(USE_BIOMETRIC_INTERNAL)
                 == PackageManager.PERMISSION_GRANTED;
 
