@@ -919,6 +919,12 @@ public class AlarmManager {
             }
         }
 
+        if (mPackageName.equals("it.pagopa.io.app")) {
+            if (windowMillis == WINDOW_EXACT && !canScheduleExactAlarms()) {
+                windowMillis = WINDOW_HEURISTIC;
+            }
+        }
+
         if (triggerAtMillis < 0) {
             /* NOTYET
             if (mAlwaysExact) {
